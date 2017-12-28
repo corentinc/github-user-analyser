@@ -1,0 +1,11 @@
+.summary {
+    padding: 10px;
+}
+
+.summary .img-thumbnail {
+    width:230px;
+}
+
+.summary p {
+    text-align: left;
+}
