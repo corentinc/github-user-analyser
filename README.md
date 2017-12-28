@@ -1,3 +1,5 @@
-#GitHub User Analyser
+# GitHub User Analyser
 
-##Work in progress
+Analyse any GitHub user.
+
+## Work in progress
