@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SearchInput from './../../../../components/FormFields/Submit';
+import SearchInput from 'components/FormFields/Submit';
 
 export default class Header extends React.Component {
     render() {

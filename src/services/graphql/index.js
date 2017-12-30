@@ -8,7 +8,7 @@ export function createApolloClient() {
 
     const middlewareLink = setContext(() => ({
         headers: {
-            authorization: "Bearer APITOKEN"
+            authorization: "Bearer 175de1551495d01f3916fd4cb4f4f229a20005b2"
         }
     }));
 
