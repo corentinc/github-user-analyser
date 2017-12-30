@@ -14,8 +14,8 @@ export default class Summary extends React.Component {
             <div className="container-fluid bg-light summary">
                 <div className="row">
                     <div className="col-2 offset-2">
-                        <a href={user.htmlUrl} target="_blank">
-                            <img className="img-thumbnail" src={user.avatar}  alt="avatar" />
+                        <a href={user.url} target="_blank">
+                            <img className="img-thumbnail" src={user.avatarUrl}  alt="avatar" />
                         </a>
                     </div>
                     <div className="col-3">
