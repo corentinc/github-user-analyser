@@ -5,17 +5,14 @@ import SearchInput from 'components/FormFields/Submit';
 export default class Header extends React.Component {
     render() {
         return (
-            <div>
-                <header className="App-header bg-light">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-4 offset-4">
-                                <SearchInput onSubmit={this.props.onSearch}/>
-                            </div>
+                <header className="bg-dark">
+                    <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                        <span className="navbar-brand">GitHub User Analyser</span>
+                        <div className="collapse navbar-collapse">
+                            <SearchInput onSubmit={this.props.onSearch}/>
                         </div>
-                    </div>
+                    </nav>
                 </header>
-            </div>
         )
     }
 }

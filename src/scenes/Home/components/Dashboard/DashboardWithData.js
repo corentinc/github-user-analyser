@@ -1,16 +1,17 @@
 import { graphql } from "react-apollo";
 import Dashboard from './index';
-import viewerQuery from '../../../../data/queries/user.js';
+import viewerQuery from 'data/queries/user.js';
+import Loader from 'components/Loader';
 var React = require('react');
 
-const User = ({ data : {loading, error, user}}) => {
-    if (loading) {
-        return <p>Loading ...</p>;
+const User = (props) => {
+    if (props.data.loading) {
+        return <Loader />;
     }
-    if (error) {
-        return <p>{error.message}</p>;
+    if (props.data.error) {
+        return <p>{props.data.error.graphQLErrors[0].type}</p>;
     }
-    return <Dashboard user={user} />;
+    return <Dashboard user={props.data.user} />;
 };
 
 export default graphql(viewerQuery, {

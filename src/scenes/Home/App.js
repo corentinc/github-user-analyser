@@ -1,10 +1,9 @@
 import React from 'react';
 
-import './App.css';
 import Header from './components/Header';
 import DashboardWithData from './components/Dashboard/DashboardWithData';
 
-class App extends React.Component {
+export default class App extends React.Component {
 
   constructor(props){
     super(props);
@@ -21,21 +20,15 @@ class App extends React.Component {
   }
 
   render() {
-    let content = "";
-    if (this.state.query === "") {
-      content = "search it";
-    } else {
-      content = <DashboardWithData username={this.state.query} />;
-    }
-
+      let main = "Empty text";
+      if (this.state.query !== "") {
+          main = <DashboardWithData username={this.state.query} />;
+      }
     return (
-      <div className="App">
-        <h1>Github profile analyser</h1>
-        <Header onSearch={this.searchFor}/>
-          {content}
+      <div>
+        <Header onSearch={this.searchFor} />
+          {main}
       </div>
     );
   }
 }
-
-export default App;
