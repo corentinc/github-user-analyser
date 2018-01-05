@@ -5,4 +5,11 @@ Visualize the hidden statistics of your GitHub account!
 
 ### Screenshot (WIP)
 
-![alt text](https://preview.ibb.co/d6gc1b/Screen_Shot_2018_01_05_at_18_44_44.png "Screenshot homepage")
+![alt text](https://i.imgur.com/CXvgmYA.png "Screenshot homepage")
+
+### Installation
+
+ 1. `npm install`
+ 2. Put your own GitHub token into `API_TOKEN` of `src/project_properties.js`
+ 3. Launch the app with `npm start`
+ 4. Access to the app on `http://localhost:3000` 
