@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormGroup, FormControl } from 'react-bootstrap';
 
 export default class Input extends React.Component {
 
@@ -15,17 +16,24 @@ export default class Input extends React.Component {
 
     onSubmit(event) {
         event.preventDefault();
-        let query = this.refs.username.value;
+        let query = this.input.value;
         this.props.onSubmit(query);
-        this.refs.username.value = "";
+        this.input.value = "";
     }
 
     render(){
         return(
-            <form onSubmit={this.onSubmit} className="form-inline mt-2 mt-md-0">
-                <input ref="username" className="form-control mr-sm-2" placeholder={this.props.placeholder} aria-label={this.props.placeholder} type="text" />
-                <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+            <div>
+                <form onSubmit={this.onSubmit}>
+                    <FormGroup>
+                        <FormControl
+                            componentClass="input"
+                            inputRef={ref => { this.input = ref; }}
+                            type="text"
+                            placeholder={this.props.placeholder} />
+                    </FormGroup>
+                </form>
+            </div>
         );
     }
 }

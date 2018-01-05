@@ -1,7 +1,9 @@
 import { graphql } from "react-apollo";
-import Dashboard from './index';
+
+import UserSummary from './index';
 import viewerQuery from 'data/queries/user.js';
 import Loader from 'components/Loader';
+
 var React = require('react');
 
 const User = (props) => {
@@ -11,7 +13,7 @@ const User = (props) => {
     if (props.data.error) {
         return <p>{props.data.error.message}</p>;
     }
-    return <Dashboard user={props.data.user} />;
+    return <UserSummary user={props.data.user} />;
 };
 
 export default graphql(viewerQuery, {

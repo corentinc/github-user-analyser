@@ -1,15 +1,14 @@
-.sidebar {
-    position: fixed;
-    top: 51px;
-    bottom: 0;
-    left: 0;
-    z-index: 1000;
-    padding: 20px 0;
-    overflow-x: hidden;
-    overflow-y: auto;
-    border-right: 1px solid #eee;
+.statItem {
+    text-align: center;
+    padding:10px;
+    margin:10px;
 }
 
-.main {
-    top: 51px;
+.statItem .value {
+    display: block;
+    font-size: 95px;
+}
+
+.statItem .desc {
+    display: block;
 }

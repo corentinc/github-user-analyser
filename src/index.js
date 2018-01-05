@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { ApolloProvider } from "react-apollo";
 
-import App from './scenes/Home/App';
+import App from './scenes/Home';
 import registerServiceWorker from './registerServiceWorker';
 import {createApolloClient} from "./services/graphql/index";
 
