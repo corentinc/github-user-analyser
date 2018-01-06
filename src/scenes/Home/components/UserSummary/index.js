@@ -14,6 +14,7 @@ export default class UserSummary extends React.Component {
       return(
           <div className="UserSummary">
               <Image src={user.avatarUrl} thumbnail className="avatar mb-3"/>
+              <br />
               <span className="desc">
                 <FaUser/><span className="font-weight-bold">{user.name}</span>
                   <br />
