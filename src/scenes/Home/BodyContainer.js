@@ -4,6 +4,7 @@ import {Grid, Row, Col} from 'react-bootstrap';
 import Submit from 'components/FormFields/Submit';
 import UserSummaryWithData from "./components/UserSummary/UserSummaryWithData";
 import DashboardWithData from "./components/Dashboard/DashboardWithData";
+import "./style.css";
 
 export default class BodyContainer extends React.Component {
 
@@ -25,7 +26,7 @@ export default class BodyContainer extends React.Component {
         return(
             <Grid fluid={true}>
                 <Row>
-                    <Col xs={12} sm={4} md={2} className="pt-4 bg-light">
+                    <Col xs={12} sm={4} md={2} className="pt-4 bg-light sidebar">
                         <Submit onSubmit={this.onSearch}/>
                         <hr />
                         <UserSummaryWithData username={this.state.query}/>

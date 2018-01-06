@@ -2,6 +2,7 @@
     text-align: center;
     padding:10px;
     margin:10px;
+    border: solid black 1px;
 }
 
 .statItem .value {

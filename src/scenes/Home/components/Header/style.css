@@ -1,4 +1,14 @@
 header .navbar {
     border-radius: 0px;
     margin-bottom: 0px;
+    height:40px;
+}
+
+header .navbar-brand {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    text-align: center;
+    margin: auto;
 }
