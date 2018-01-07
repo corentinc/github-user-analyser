@@ -1,7 +1,7 @@
 import gql from "graphql-tag";
 
 export default gql`
-   query UserQuery($login: String!) {
+   query UserSummaryQuery($login: String!) {
       user(login: $login) {
         name
         avatarUrl

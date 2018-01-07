@@ -1,6 +1,6 @@
 import { graphql } from "react-apollo";
 import Dashboard from './index';
-import viewerQuery from 'data/queries/user.js';
+import userDashboardQuery from 'data/queries/userDashboard.js';
 import Loader from 'components/Loader';
 var React = require('react');
 
@@ -14,6 +14,6 @@ const User = (props) => {
     return <Dashboard user={props.data.user} />;
 };
 
-export default graphql(viewerQuery, {
+export default graphql(userDashboardQuery, {
     options: ({ username }) => ({variables: {login: username}})
 })(User);

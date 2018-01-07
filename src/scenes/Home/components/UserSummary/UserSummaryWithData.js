@@ -1,7 +1,7 @@
 import { graphql } from "react-apollo";
 
 import UserSummary from './index';
-import viewerQuery from 'data/queries/user.js';
+import userSummaryQuery from 'data/queries/userSummary.js';
 import Loader from 'components/Loader';
 
 var React = require('react');
@@ -16,6 +16,6 @@ const User = (props) => {
     return <UserSummary user={props.data.user} />;
 };
 
-export default graphql(viewerQuery, {
+export default graphql(userSummaryQuery, {
     options: ({ username }) => ({variables: {login: username}})
 })(User);

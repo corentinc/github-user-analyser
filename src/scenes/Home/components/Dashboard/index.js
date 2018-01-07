@@ -10,7 +10,7 @@ export default class Dashboard extends React.Component {
         <Grid>
           <Row>
               <Col xs={12} sm={6} md={4}>
-                  <OwnRepositories/>
+                  <OwnRepositories ownRepositoriesCount={this.props.user.ownRepositories.totalCount}/>
               </Col>
           </Row>
         </Grid>
