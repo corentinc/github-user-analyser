@@ -31,7 +31,7 @@ export default class BodyContainer extends React.Component {
                         <hr />
                         <UserSummaryWithData username={this.state.query}/>
                     </Col>
-                    <Col xs={12} sm={8} md={10} className="pt-1">
+                    <Col xs={12} sm={8} md={10} className="pt-3">
                         <DashboardWithData  username={this.state.query}/>
                     </Col>
                 </Row>

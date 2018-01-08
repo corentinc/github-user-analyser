@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image } from 'react-bootstrap';
 import {parse, distanceInWords} from 'date-fns'
-import {FaUser, FaSignIn} from 'react-icons/lib/fa';
+import {FaUser, FaSignIn, FaExternalLink} from 'react-icons/lib/fa';
 
 import './style.css';
 
@@ -17,8 +17,12 @@ export default class UserSummary extends React.Component {
               <br />
               <span className="desc">
                 <FaUser/><span className="font-weight-bold">{user.name}</span>
-                  <br />
+                <br />
                 <FaSignIn/><span className="font-weight-light">{createdDateDesc}</span>
+                <br />
+                <FaExternalLink/><span className="font-weight-light">
+                  <a href={user.url}>GitHub</a>
+              </span>
               </span>
           </div>
       );
