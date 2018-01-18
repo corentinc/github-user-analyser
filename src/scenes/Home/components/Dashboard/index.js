@@ -3,6 +3,7 @@ import {Grid, Row, Col} from 'react-bootstrap';
 
 import OwnRepositories from "./components/OwnRepositories";
 import UserList from "./components/UserList";
+import RepositoryList from "./components/RepositoryList";
 import './style.css';
 
 export default class Dashboard extends React.Component {
@@ -23,6 +24,9 @@ export default class Dashboard extends React.Component {
         return(
             <Grid>
                 <Row>
+                    <Col xs={12} sm={12} md={12}>
+                        <RepositoryList title="Top 5 of contributed project" repositories={user.repositoriesContributedTo.nodes}/>
+                    </Col>
                     <Col xs={12} sm={6} md={4}>
                         <OwnRepositories ownRepositoriesCount={user.ownRepositories.totalCount}/>
                     </Col>

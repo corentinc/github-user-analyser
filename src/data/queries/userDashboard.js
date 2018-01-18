@@ -16,6 +16,23 @@ export default gql`
             ...FragmentUser
           }
         }
+        repositoriesContributedTo(first: 5, orderBy: {field: STARGAZERS, direction: DESC}) {
+              totalCount
+              nodes {
+                id
+                nameWithOwner
+                url
+                description
+                stargazers {
+                  totalCount
+                }
+                languages(first:1, orderBy: {field: SIZE, direction: DESC}) {
+                    nodes {
+                        name
+                    }
+                }
+              }
+        }
       }
    }
     fragment FragmentUser on User {

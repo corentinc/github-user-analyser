@@ -5,7 +5,7 @@ export default class OwnRepositories extends React.Component {
         return (
             <div className="statItem bg-light">
                 <span className="value">{this.props.ownRepositoriesCount}</span>
-                <span className="desc">own repositories</span>
+                <span className="desc">repositories created</span>
             </div>
     );
     }

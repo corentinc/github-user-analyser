@@ -5,7 +5,7 @@ Visualize the hidden statistics of your GitHub account!
 
 ### Screenshot (WIP)
 
-![alt text](https://i.imgur.com/RHSdbjR.png "Screenshot homepage")
+![alt text](https://i.imgur.com/Oe0DSYH.png "Screenshot homepage")
 
 ### Installation
 
