@@ -6,7 +6,7 @@ export default class RepositoryList extends React.Component {
     render() {
         let repositoriesAsRow = this.props.repositories.map(r =>
             <tr key={r.id}>
-                <td><a href={r.url} >{r.nameWithOwner}</a></td>
+                <td><a href={r.url} target="_blank">{r.nameWithOwner}</a></td>
                 <td>{r.description}</td>
                 <td>{r.languages.nodes[0].name}</td>
                 <td>{r.stargazers.totalCount}</td>

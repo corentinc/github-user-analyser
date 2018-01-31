@@ -8,18 +8,12 @@ import './style.css';
 
 export default class Dashboard extends React.Component {
     render(){
-        var sortByMostFollowed = function(userList) {
-            userList.sort((a, b) => {
-                return b.followers.totalCount - a.followers.totalCount;
-            });
-        }
-
         const user = this.props.user;
         let followers = user.followers.nodes.slice(0);
-        sortByMostFollowed(followers);
+        this.sortByMostFollowed(followers);
 
         let following = user.following.nodes.slice(0);
-        sortByMostFollowed(following);
+        this.sortByMostFollowed(following);
 
         return(
             <Grid>
@@ -39,5 +33,11 @@ export default class Dashboard extends React.Component {
                 </Row>
             </Grid>
         );
+    }
+
+    sortByMostFollowed(userList) {
+        userList.sort((a, b) => {
+            return b.followers.totalCount - a.followers.totalCount;
+        });
     }
 }
